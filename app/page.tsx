@@ -6,22 +6,24 @@ import { Award, Users, Lightbulb, Target, Building2, MapPin, Phone } from "lucid
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 to-red-200">
         <div className="max-w-7xl mx-auto">
           <div className="relative mb-12 rounded-2xl overflow-hidden">
             <img
-              src="/images/hero-banner.png"
-              alt="New Kigali Designers modern fashion studio"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+              alt="New Kigali Designers textile factory floor with workers"
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
               <div className="text-center text-white">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">New Kigali Designers</h1>
-                <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 max-w-2xl mx-auto">
+                  New Kigali Designers
+                </h1>
+                <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
                   Leading clothing production company in Rwanda, masterfully blending traditional African heritage with
                   contemporary fashion innovation
                 </p>
@@ -40,9 +42,18 @@ export default function HomePage() {
       </section>
 
       {/* Company Background */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-25 to-red-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">Our Heritage & Vision</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">Our Foundation</h2>
+
+          <div className="mb-12 rounded-2xl overflow-hidden">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+              alt="New Kigali Designers manufacturing facility"
+              className="w-full h-64 object-cover"
+            />
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-600">
@@ -94,7 +105,7 @@ export default function HomePage() {
       </section>
 
       {/* Operations */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Operations</h2>
@@ -105,35 +116,38 @@ export default function HomePage() {
             <Card>
               <CardHeader>
                 <img
-                  src="/images/operations-quality.png"
-                  alt="Quality control process"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd29-lhdnUH3iJlFMugWYYvVQz9biToLRz3.jpg"
+                  alt="Leadership team at elegant company event"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
-                <CardTitle>Quality Control</CardTitle>
+                <CardTitle>Executive Events & Networking</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Our management team regularly inspects equipment and processes to ensure the highest quality
-                  standards.
+                  Our leadership team actively participates in industry events and networking opportunities to build
+                  strategic partnerships and stay ahead of fashion trends.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <video
-                  src="/videos/design-process.mp4"
-                  controls
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                  poster="/images/pattern-development.png"
-                >
-                  Your browser does not support the video tag.
-                </video>
-                <CardTitle>Design Process</CardTitle>
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/7zSBYuktVlU"
+                    title="New Kigali Designers Production Process"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <CardTitle>Production Process Video</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Watch our comprehensive design and production process from concept to finished garment.
+                  Watch our comprehensive design and production process from concept to finished garment in our
+                  state-of-the-art facility.
                 </p>
               </CardContent>
             </Card>
@@ -141,49 +155,72 @@ export default function HomePage() {
             <Card>
               <CardHeader>
                 <img
-                  src="/images/strategic-planning.png"
-                  alt="Strategic planning meeting"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd23.jpg-MmYS8DlkXXMIn65oRa0tUGtphQJYEz.jpeg"
+                  alt="Professional in traditional African attire showcasing our design excellence"
+                  className="w-full h-56 object-contain bg-gray-100 rounded-lg mb-4"
+                />
+                <CardTitle>Design Excellence</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Our designs blend traditional African aesthetics with contemporary fashion, creating unique pieces
+                  that celebrate our cultural heritage while meeting modern style demands.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd19.jpg-tHonLhZx7j6DZWgMtgT9moR11fdYcO.webp"
+                  alt="Fashion industry collaboration and exhibition participation"
+                  className="w-full h-56 object-contain bg-gray-100 rounded-lg mb-4"
+                />
+                <CardTitle>Industry Collaboration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  We actively collaborate with fashion industry professionals and participate in exhibitions to showcase
+                  African fashion on international platforms.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd24.jpg-V63iDaN0CMEZXUm80w3ANfHCJqRRsx.jpeg"
+                  alt="Strategic planning meeting with leadership team"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <CardTitle>Strategic Planning</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Regular leadership meetings ensure we stay aligned with our growth objectives and market demands.
+                  Regular leadership meetings ensure we stay aligned with our growth objectives and market demands while
+                  maintaining our quality standards.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <img
-                  src="/images/pattern-development.png"
-                  alt="Pattern development process"
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <CardTitle>Pattern Development</CardTitle>
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/2o6FjOrcjpQ"
+                    title="New Kigali Designers Company Overview"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <CardTitle>Company Overview Video</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Our experienced team meticulously develops patterns and fabric layouts to ensure optimal material
-                  usage and perfect fit.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <img
-                  src="/images/executive-leadership.png"
-                  alt="Executive leadership team"
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <CardTitle>Executive Leadership</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Our leadership team conducts regular strategic sessions to drive innovation and maintain our
-                  competitive edge in the market.
+                  Discover more about New Kigali Designers, our mission, values, and commitment to excellence in African
+                  fashion manufacturing.
                 </p>
               </CardContent>
             </Card>
@@ -192,7 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-25 to-red-75">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Trusted Partners</h2>
@@ -238,7 +275,7 @@ export default function HomePage() {
       </section>
 
       {/* Innovation & Differentiators */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-75 to-red-125">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
@@ -297,7 +334,7 @@ export default function HomePage() {
       </section>
 
       {/* Awards & Certificates */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Recognition & Awards</h2>
@@ -353,7 +390,7 @@ export default function HomePage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 to-red-150">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Leadership Team</h2>
@@ -364,8 +401,8 @@ export default function HomePage() {
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="/images/ceo-aisha.png"
-                  alt="Aisha Uwimana, CEO"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <CardTitle>Aisha Uwimana</CardTitle>
@@ -381,8 +418,8 @@ export default function HomePage() {
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="/images/coo-jean-baptiste.png"
-                  alt="Jean-Baptiste Nzeyimana, COO"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <CardTitle>Jean-Baptiste Nzeyimana</CardTitle>
@@ -398,8 +435,8 @@ export default function HomePage() {
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="/images/creative-director-grace.png"
-                  alt="Grace Mukamana, Creative Director"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <CardTitle>Grace Mukamana</CardTitle>
@@ -415,8 +452,8 @@ export default function HomePage() {
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="/images/tech-manager-samuel.png"
-                  alt="Samuel Habimana, Technology Manager"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <CardTitle>Samuel Habimana</CardTitle>
@@ -432,8 +469,8 @@ export default function HomePage() {
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="/images/quality-manager-marie.png"
-                  alt="Marie Uwimana, Quality Assurance Manager"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <CardTitle>Marie Uwimana</CardTitle>
@@ -450,7 +487,7 @@ export default function HomePage() {
       </section>
 
       {/* Future Vision */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-75 to-red-125">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Future Innovations</h2>
@@ -507,7 +544,7 @@ export default function HomePage() {
       </section>
 
       {/* Visit Our Location */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 to-red-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Visit Our Location</h2>
@@ -517,8 +554,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="lg:col-span-2 mb-8">
               <img
-                src="/images/facility-exterior.png"
-                alt="New Kigali Designers facility exterior"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd30-ndyAeQvVlqaNf734TPjYTxEiGCGZzU.jpeg"
+                alt="New Kigali Designers facility with accounts department"
                 className="w-full h-64 object-cover rounded-lg"
               />
             </div>
@@ -555,7 +592,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gradient-to-br from-gray-900 to-red-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-2">New Kigali Designers</h3>

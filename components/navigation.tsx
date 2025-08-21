@@ -13,8 +13,13 @@ export function Navigation() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd21.jpg-ZXePt8dScXJMywdLdXIJgGgtCsBSAO.jpeg"
+              alt="NKD Logo"
+              className="h-8 w-8 object-contain"
+            />
+            <Link href="/" className="text-xl font-bold text-gray-900">
               New Kigali Designers
             </Link>
           </div>
@@ -26,16 +31,22 @@ export function Navigation() {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/gallery"
                 className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
               >
-                About
+                Gallery
               </Link>
               <Link
-                href="/collections"
+                href="/services"
                 className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
               >
-                Collections
+                Services
+              </Link>
+              <Link
+                href="/production"
+                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Production
               </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1">
@@ -51,13 +62,6 @@ export function Navigation() {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link
-                href="/contact"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Contact
-              </Link>
-              <Button size="sm">Get Quote</Button>
               <Button variant="outline" size="sm" asChild>
                 <Link href="/admin/login">Admin</Link>
               </Button>
@@ -84,16 +88,22 @@ export function Navigation() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/gallery"
               className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             >
-              About
+              Gallery
             </Link>
             <Link
-              href="/collections"
+              href="/services"
               className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Collections
+              Services
+            </Link>
+            <Link
+              href="/production"
+              className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Production
             </Link>
             <Link
               href="/careers"
@@ -107,16 +117,7 @@ export function Navigation() {
             >
               Internship Program
             </Link>
-            <Link
-              href="/contact"
-              className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Contact
-            </Link>
             <div className="px-3 py-2 space-y-2">
-              <Button size="sm" className="w-full">
-                Get Quote
-              </Button>
               <Button variant="outline" size="sm" className="w-full bg-transparent" asChild>
                 <Link href="/admin/login">Admin Login</Link>
               </Button>
