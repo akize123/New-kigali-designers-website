@@ -3,7 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,6 +37,20 @@ export function Navigation() {
               >
                 Collections
               </Link>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1">
+                  Careers
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <Link href="/careers">Job Opportunities</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/careers/internship">Internship Program</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link
                 href="/contact"
                 className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
@@ -43,6 +58,9 @@ export function Navigation() {
                 Contact
               </Link>
               <Button size="sm">Get Quote</Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/admin/login">Admin</Link>
+              </Button>
             </div>
           </div>
 
@@ -78,14 +96,29 @@ export function Navigation() {
               Collections
             </Link>
             <Link
+              href="/careers"
+              className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Job Opportunities
+            </Link>
+            <Link
+              href="/careers/internship"
+              className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Internship Program
+            </Link>
+            <Link
               href="/contact"
               className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact
             </Link>
-            <div className="px-3 py-2">
+            <div className="px-3 py-2 space-y-2">
               <Button size="sm" className="w-full">
                 Get Quote
+              </Button>
+              <Button variant="outline" size="sm" className="w-full bg-transparent" asChild>
+                <Link href="/admin/login">Admin Login</Link>
               </Button>
             </div>
           </div>
