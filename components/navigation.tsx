@@ -38,7 +38,7 @@ export function Navigation() {
               </Link>
               <Link
                 href="/services"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-blue-600 py-2 rounded-md font-medium text-black px-3.5 leading-[1.85rem] text-base"
               >
                 Services
               </Link>
