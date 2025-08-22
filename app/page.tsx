@@ -554,7 +554,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="lg:col-span-2 mb-8">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd30-ndyAeQvVlqaNf734TPjYTxEiGCGZzU.jpeg"
+                src="https://embed.waze.com/iframe?zoom=17&lat=-1.94407&lon=30.06188&pin=1"
                 alt="New Kigali Designers facility with accounts department"
                 className="w-full h-64 object-cover rounded-lg"
               />
