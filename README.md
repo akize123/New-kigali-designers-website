@@ -1,4 +1,4 @@
-# Likagi website rebuild
+# NEW KIGALI DESIGNERS
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
