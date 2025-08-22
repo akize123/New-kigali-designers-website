@@ -605,7 +605,8 @@ export default function HomePage() {
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
-              Contact Us On +250780521244
+              Contact Us On +250 780 46 59 74
+              Email: derrickkanyonya@newkigalidesigners.rw
             </Button>
             <Button
               variant="outline"
