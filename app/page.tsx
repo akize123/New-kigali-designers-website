@@ -584,7 +584,7 @@ export default function HomePage() {
               <CardContent className="space-y-2">
                 <p className="text-gray-600 font-extrabold">Phone: +250 780 46 59 74</p>
              <p className="text-gray-600 font-black">Email: derrickkanyonya@newkigalidesigners.rw</p>
-                <p className="text-gray-600">Business Hours: Mon-Fri 7:00 AM - 7:00 PM</p>
+                <p className="text-gray-600 text-justify font-extrabold">Business Hours: Mon-Fri 7:00 AM - 7:00 PM</p>
                 <p className="text-gray-600">Saturday: 8:00 AM - 2:00 PM</p>
                 <p className="text-gray-600">Sunday: 8:00 AM - 2:00 PM</p>
               </CardContent>
