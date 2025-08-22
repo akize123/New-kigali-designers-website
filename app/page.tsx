@@ -53,7 +53,7 @@ export default function HomePage() {
     className="w-full h-64 object-cover"
   />
   <img
-    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd3.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
     alt="New Kigali Designers manufacturing facility"
     className="w-full h-64 object-cover"
   />
