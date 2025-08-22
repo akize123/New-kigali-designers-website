@@ -27,7 +27,7 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+              <Link href="/" className="hover:text-blue-600 py-2 rounded-md font-semibold leading-[1.85rem] text-base text-black px-3.5">
                 Home
               </Link>
               <Link
