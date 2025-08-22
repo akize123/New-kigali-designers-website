@@ -405,8 +405,8 @@ export default function HomePage() {
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>Aisha Uwimana</CardTitle>
-                <CardDescription>Chief Executive Officer</CardDescription>
+                <CardTitle>{"Chantal Murebwa B. Mawe\n\n"}</CardTitle>
+                <CardDescription>{"\n      "}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -422,8 +422,8 @@ export default function HomePage() {
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>Jean-Baptiste Nzeyimana</CardTitle>
-                <CardDescription>Chief Operating Officer</CardDescription>
+                <CardTitle>{"Andrew Kanyonya\n\n"}</CardTitle>
+                <CardDescription>Business Development Manager</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -439,12 +439,12 @@ export default function HomePage() {
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>Grace Mukamana</CardTitle>
-                <CardDescription>Creative Director</CardDescription>
+                <CardTitle>{"Derrick Kanyonya\n\n"}</CardTitle>
+                <CardDescription>Assistant to Business Development Manager</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  Award-winning designer, graduate of London College of Fashion
+                  {""}
                 </p>
               </CardContent>
             </Card>
@@ -456,11 +456,11 @@ export default function HomePage() {
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>Samuel Habimana</CardTitle>
-                <CardDescription>Technology Manager</CardDescription>
+                <CardTitle>{"Agnes Kayitesi\n\n"}</CardTitle>
+                <CardDescription>Assistant Managing Director</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center leading-8 font-semibold">
                   Digital innovation specialist, implementing smart manufacturing solutions
                 </p>
               </CardContent>
@@ -473,8 +473,8 @@ export default function HomePage() {
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>Marie Uwimana</CardTitle>
-                <CardDescription>Quality Assurance Manager</CardDescription>
+                <CardTitle>{"Jane\n\n"}</CardTitle>
+                <CardDescription>{"\n\nSales and Marketing"}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">

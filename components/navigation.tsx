@@ -44,12 +44,12 @@ export function Navigation() {
               </Link>
               <Link
                 href="/production"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-blue-600 py-2 rounded-md font-medium leading-[1.85rem] text-base text-black px-3.5"
               >
                 Production
               </Link>
               <DropdownMenu>
-                <DropdownMenuTrigger className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1">
+                <DropdownMenuTrigger className="hover:text-blue-600 py-2 rounded-md font-medium flex items-center gap-1 text-base leading-[1.85rem] text-black px-3.5">
                   Careers
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>

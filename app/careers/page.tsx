@@ -33,7 +33,7 @@ export default function CareersPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose New Kigali Designers?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-[1.85rem]">Why To Choose New Kigali Designers?</h2>
             <p className="text-xl text-gray-600">
               Join a company that values innovation, culture, and professional growth
             </p>
@@ -96,7 +96,7 @@ export default function CareersPage() {
                   <div>
                     <CardTitle className="text-xl">Accounting Department Internship</CardTitle>
                     <CardDescription className="text-lg mt-2">
-                      3-6 month internship program for accounting students
+                      1-3 month internship program for accounting students
                     </CardDescription>
                   </div>
                   <Badge className="bg-blue-600">Featured</Badge>
