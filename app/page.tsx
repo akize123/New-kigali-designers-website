@@ -47,17 +47,18 @@ export default function HomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">Our Foundation</h2>
 
           <div className="mb-12 rounded-2xl overflow-hidden">
-          <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
-              alt="New Kigali Designers manufacturing facility"
-              className="w-full h-64 object-cover"
-            />
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
-              alt="New Kigali Designers manufacturing facility"
-              className="w-full h-64 object-cover"
-            />
-          </div>
+  <img
+    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+    alt="New Kigali Designers manufacturing facility"
+    className="w-full h-64 object-cover"
+  />
+  <img
+    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+    alt="New Kigali Designers manufacturing facility"
+    className="w-full h-64 object-cover"
+  />
+</div>
+
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
