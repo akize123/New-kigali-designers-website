@@ -48,7 +48,7 @@ export default function HomePage() {
 
           <div className="mb-12 rounded-2xl overflow-hidden">
   <img
-    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
     alt="New Kigali Designers manufacturing facility"
     className="w-full h-64 object-cover"
   />
