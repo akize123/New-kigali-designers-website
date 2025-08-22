@@ -47,6 +47,11 @@ export default function HomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">Our Foundation</h2>
 
           <div className="mb-12 rounded-2xl overflow-hidden">
+          <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+              alt="New Kigali Designers manufacturing facility"
+              className="w-full h-64 object-cover"
+            />
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
               alt="New Kigali Designers manufacturing facility"
@@ -409,8 +414,8 @@ export default function HomePage() {
                 <CardDescription>{"\n      "}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
-                  15+ years in fashion industry, former designer at international fashion houses
+                <p className="text-gray-600 text-center font-bold">
+                  Founder and Managing Director New Kigali Designers &amp; Outfitters "House of tailor made Garments"
                 </p>
               </CardContent>
             </Card>
@@ -426,7 +431,7 @@ export default function HomePage() {
                 <CardDescription>Business Development Manager</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center font-bold">
                   Operations expert with MBA from INSEAD, specializing in sustainable manufacturing
                 </p>
               </CardContent>
@@ -460,7 +465,7 @@ export default function HomePage() {
                 <CardDescription>Assistant Managing Director</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center leading-8 font-semibold">
+                <p className="text-gray-600 text-center leading-8 font-bold">
                   Digital innovation specialist, implementing smart manufacturing solutions
                 </p>
               </CardContent>
@@ -477,7 +482,7 @@ export default function HomePage() {
                 <CardDescription>{"\n\nSales and Marketing"}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center font-bold">
                   Quality control expert ensuring international standards compliance
                 </p>
               </CardContent>
