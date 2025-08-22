@@ -1,20 +1,9 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      data-slot="card"
-      className={cn(
-        "bg-card flex flex-col gap-6 rounded-xl border py-6 shadow-sm items-stretch",
-        className
-      )}
-      {...props}
-    />
-  )
-}
- <div
       data-slot="card"
       className={cn(
         "bg-card flex flex-col gap-6 rounded-xl border py-6 shadow-sm items-stretch",
@@ -90,14 +79,6 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
     />
   )
 }
-<div
-      data-slot="card"
-      className={cn(
-        "bg-card flex flex-col gap-6 rounded-xl border py-6 shadow-sm items-stretch",
-        className
-      )}
-      {...props}
-    />
 
 export {
   Card,
