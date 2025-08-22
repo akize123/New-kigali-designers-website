@@ -550,14 +550,14 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Visit Our Location</h2>
             <p className="text-xl text-gray-600">Find us in the heart of Kigali, Rwanda's vibrant capital city</p>
           </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="lg:col-span-2 mb-8">
-              <img
-                src="https://embed.waze.com/iframe?zoom=17&lat=-1.94407&lon=30.06188&pin=1"
-                alt="New Kigali Designers facility with accounts department"
-                className="w-full h-64 object-cover rounded-lg"
-              />
+          <div className="lg:col-span-2 mb-8">
+          <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
+           <iframe
+          src="https://embed.waze.com/iframe?zoom=17&lat=-1.94407&lon=30.06188&pin=1"
+          className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
+           allowFullScreen
+           title="New Kigali Designers Live Map"
+             ></iframe>
             </div>
 
             <Card>
