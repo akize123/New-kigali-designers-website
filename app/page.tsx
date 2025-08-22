@@ -583,8 +583,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="space-y-2">
                 <p className="text-gray-600">Phone: +250 780 521 244</p>
-                <p className="text-gray-600">Business Hours: Mon-Fri 8:00 AM - 6:00 PM</p>
-                <p className="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+                <p className="text-gray-600">Business Hours: Mon-Fri 7:00 AM - 7:00 PM</p>
+                <p className="text-gray-600">Saturday: 8:00 AM - 2:00 PM</p>
+                <p className="text-gray-600">Sunday: 8:00 AM - 2:00 PM</p>
               </CardContent>
             </Card>
           </div>
@@ -604,13 +605,13 @@ export default function HomePage() {
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
-              Contact Us
+              Contact Us On +250780521244
             </Button>
             <Button
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
-              Visit Gallery
+              Visit Gallery On the Website
             </Button>
           </div>
 
