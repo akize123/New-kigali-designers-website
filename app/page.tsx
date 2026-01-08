@@ -1,10 +1,15 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Award, Users, Lightbulb, Target, Building2, MapPin, Phone } from "lucide-react"
+import { useTranslate } from "@/hooks/use-language"
 
 export default function HomePage() {
+  const t = useTranslate()
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100">
       <Navigation />
@@ -14,28 +19,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative mb-12 rounded-2xl overflow-hidden">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
+              src="/images/nkd1.jpeg"
               alt="New Kigali Designers textile factory floor with workers"
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
               <div className="text-center text-white">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 max-w-2xl mx-auto">
-                  New Kigali Designers
-                </h1>
-                <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
-                  Leading clothing production company in Rwanda, masterfully blending traditional African heritage with
-                  contemporary fashion innovation
-                </p>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 max-w-2xl mx-auto">{t("hero.title")}</h1>
+                <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">{t("hero.subtitle")}</p>
               </div>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-3">
-              Explore Our Collections
+              {t("hero.exploreCollections")}
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-3 bg-transparent">
-              Learn Our Story
+              {t("hero.learnStory")}
             </Button>
           </div>
         </div>
@@ -44,65 +44,48 @@ export default function HomePage() {
       {/* Company Background */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-25 to-red-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">Our Foundation</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">{t("foundation.title")}</h2>
 
           <div className="mb-12 rounded-2xl overflow-hidden">
-  <img
-    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
-    alt="New Kigali Designers manufacturing facility"
-    className="w-full h-64 object-cover"
-  />
-  <img
-    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-H3w9tmiZJjkZ9skDLY1d3Qx8Ek6rmg.jpeg"
-    alt="New Kigali Designers manufacturing facility"
-    className="w-full h-64 object-cover"
-  />
-</div>
-
+            <img
+              src="/images/nkd1.jpeg"
+              alt="New Kigali Designers manufacturing facility"
+              className="w-full h-64 object-cover"
+            />
+            <img
+              src="/images/nkd1.jpeg"
+              alt="New Kigali Designers manufacturing facility"
+              className="w-full h-64 object-cover"
+            />
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-600">
-                New Kigali Designers was founded in 1998, with the vision of being a mass producer for garments
-                products. We have since grown our facility and technologies to serve our customers best.
-              </p>
-              <p className="text-lg text-gray-600">
-                We specialize in promotional materials, uniforms for institutions and we also have our own retail brands
-                sold to the local market. New Kigali Designer is proud of the great achievements over the last 20 years
-                in the industry.
-              </p>
-              <p className="text-lg text-gray-600">
-                We are looking forward to expanding and continue maintaining our position in the market. New Kigali
-                Designers and Outfitters is in the business of Garments Manufacturing.
-              </p>
+              <p className="text-lg text-gray-600">{t("foundation.description1")}</p>
+              <p className="text-lg text-gray-600">{t("foundation.description2")}</p>
+              <p className="text-lg text-gray-600">{t("foundation.description3")}</p>
             </div>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="h-6 w-6 text-blue-600" />
-                    Our Mission
+                    {t("foundation.mission")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
-                    To create exceptional clothing that celebrates African culture while meeting international quality
-                    standards, empowering local artisans and promoting sustainable fashion practices.
-                  </p>
+                  <p className="text-gray-600">{t("foundation.missionDescription")}</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Lightbulb className="h-6 w-6 text-blue-600" />
-                    Innovation Focus
+                    {t("foundation.innovationFocus")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
-                    We integrate cutting-edge production techniques with traditional craftsmanship, utilizing
-                    eco-friendly materials and digital design tools to create unique, sustainable fashion pieces.
-                  </p>
+                  <p className="text-gray-600">{t("foundation.innovationDescription")}</p>
                 </CardContent>
               </Card>
             </div>
@@ -114,25 +97,22 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Operations</h2>
-            <p className="text-xl text-gray-600">Behind the scenes of our world-class garment manufacturing facility</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("operations.title")}</h2>
+            <p className="text-xl text-gray-600">{t("operations.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd29-lhdnUH3iJlFMugWYYvVQz9biToLRz3.jpg"
+                  src="/images/nkd29.jpg"
                   alt="Leadership team at elegant company event"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
-                <CardTitle>Executive Events & Networking</CardTitle>
+                <CardTitle>{t("operations.executiveEvents")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Our leadership team actively participates in industry events and networking opportunities to build
-                  strategic partnerships and stay ahead of fashion trends.
-                </p>
+                <p className="text-gray-600">{t("operations.executiveEventsDescription")}</p>
               </CardContent>
             </Card>
 
@@ -148,64 +128,52 @@ export default function HomePage() {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <CardTitle>Production Process Video</CardTitle>
+                <CardTitle>{t("operations.productionProcess")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Watch our comprehensive design and production process from concept to finished garment in our
-                  state-of-the-art facility.
-                </p>
+                <p className="text-gray-600">{t("operations.productionProcessDescription")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd23.jpg-MmYS8DlkXXMIn65oRa0tUGtphQJYEz.jpeg"
+                  src="/images/nkd23.jpeg"
                   alt="Professional in traditional African attire showcasing our design excellence"
                   className="w-full h-56 object-contain bg-gray-100 rounded-lg mb-4"
                 />
-                <CardTitle>Design Excellence</CardTitle>
+                <CardTitle>{t("operations.designExcellence")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Our designs blend traditional African aesthetics with contemporary fashion, creating unique pieces
-                  that celebrate our cultural heritage while meeting modern style demands.
-                </p>
+                <p className="text-gray-600">{t("operations.designExcellenceDescription")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd19.jpg-tHonLhZx7j6DZWgMtgT9moR11fdYcO.webp"
+                  src="/images/nkd19.webp"
                   alt="Fashion industry collaboration and exhibition participation"
                   className="w-full h-56 object-contain bg-gray-100 rounded-lg mb-4"
                 />
-                <CardTitle>Industry Collaboration</CardTitle>
+                <CardTitle>{t("operations.industryCollaboration")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  We actively collaborate with fashion industry professionals and participate in exhibitions to showcase
-                  African fashion on international platforms.
-                </p>
+                <p className="text-gray-600">{t("operations.industryCollaborationDescription")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd24.jpg-V63iDaN0CMEZXUm80w3ANfHCJqRRsx.jpeg"
+                  src="/images/nkd24.jpeg"
                   alt="Strategic planning meeting with leadership team"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
-                <CardTitle>Strategic Planning</CardTitle>
+                <CardTitle>{t("operations.strategicPlanning")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Regular leadership meetings ensure we stay aligned with our growth objectives and market demands while
-                  maintaining our quality standards.
-                </p>
+                <p className="text-gray-600">{t("operations.strategicPlanningDescription")}</p>
               </CardContent>
             </Card>
 
@@ -221,13 +189,10 @@ export default function HomePage() {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <CardTitle>Company Overview Video</CardTitle>
+                <CardTitle>{t("operations.companyOverview")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Discover more about New Kigali Designers, our mission, values, and commitment to excellence in African
-                  fashion manufacturing.
-                </p>
+                <p className="text-gray-600">{t("operations.companyOverviewDescription")}</p>
               </CardContent>
             </Card>
           </div>
@@ -238,42 +203,40 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-25 to-red-75">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Trusted Partners</h2>
-            <p className="text-xl text-gray-600">
-              Collaborating with leading institutions and organizations across Rwanda and beyond
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("partners.title")}</h2>
+            <p className="text-xl text-gray-600">{t("partners.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center">
               <CardHeader>
                 <Building2 className="h-12 w-12 mx-auto text-blue-600 mb-4" />
-                <CardTitle>Bank of Kigali</CardTitle>
-                <CardDescription>Financial Partner</CardDescription>
+                <CardTitle>{t("partners.bankOfKigali")}</CardTitle>
+                <CardDescription>{t("partners.financialPartner")}</CardDescription>
               </CardHeader>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Building2 className="h-12 w-12 mx-auto text-blue-600 mb-4" />
-                <CardTitle>Rwanda Development Board</CardTitle>
-                <CardDescription>Strategic Partner</CardDescription>
+                <CardTitle>{t("partners.rwandaDevelopmentBoard")}</CardTitle>
+                <CardDescription>{t("partners.strategicPartner")}</CardDescription>
               </CardHeader>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Building2 className="h-12 w-12 mx-auto text-blue-600 mb-4" />
-                <CardTitle>African Fashion Council</CardTitle>
-                <CardDescription>Industry Partner</CardDescription>
+                <CardTitle>{t("partners.africanFashionCouncil")}</CardTitle>
+                <CardDescription>{t("partners.industryPartner")}</CardDescription>
               </CardHeader>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Building2 className="h-12 w-12 mx-auto text-blue-600 mb-4" />
-                <CardTitle>Kigali Fashion Week</CardTitle>
-                <CardDescription>Event Partner</CardDescription>
+                <CardTitle>{t("partners.kigaliFashionWeek")}</CardTitle>
+                <CardDescription>{t("partners.eventPartner")}</CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -284,10 +247,8 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-75 to-red-125">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
-            <p className="text-xl text-gray-600">
-              Our unique innovations and approaches that distinguish us in the fashion industry
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("innovation.title")}</h2>
+            <p className="text-xl text-gray-600">{t("innovation.subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -295,14 +256,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Lightbulb className="h-6 w-6 text-blue-600" />
-                  Smart Fabric Technology
+                  {t("innovation.smartFabricTechnology")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  We integrate moisture-wicking and temperature-regulating properties into traditional fabrics, creating
-                  comfortable wear for Africa's diverse climates.
-                </p>
+                <p className="text-gray-600">{t("innovation.smartFabricTechnologyDescription")}</p>
               </CardContent>
             </Card>
 
@@ -310,14 +268,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Users className="h-6 w-6 text-blue-600" />
-                  Artisan Collaboration
+                  {t("innovation.artisanCollaboration")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Our unique partnership model with local artisans ensures authentic traditional techniques while
-                  providing fair wages and skills development.
-                </p>
+                <p className="text-gray-600">{t("innovation.artisanCollaborationDescription")}</p>
               </CardContent>
             </Card>
 
@@ -325,14 +280,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Target className="h-6 w-6 text-blue-600" />
-                  Sustainable Production
+                  {t("innovation.sustainableProduction")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Zero-waste production methods and organic dye processes make our clothing environmentally responsible
-                  without compromising quality.
-                </p>
+                <p className="text-gray-600">{t("innovation.sustainableProductionDescription")}</p>
               </CardContent>
             </Card>
           </div>
@@ -343,52 +295,52 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Recognition & Awards</h2>
-            <p className="text-xl text-gray-600">Celebrating our achievements and commitment to excellence</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("awards.title")}</h2>
+            <p className="text-xl text-gray-600">{t("awards.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center">
               <CardHeader>
                 <Award className="h-12 w-12 mx-auto text-yellow-500 mb-4" />
-                <CardTitle>Best African Fashion Brand 2023</CardTitle>
-                <CardDescription>African Fashion Awards</CardDescription>
+                <CardTitle>{t("awards.bestAfricanFashionBrand")}</CardTitle>
+                <CardDescription>{t("awards.africanFashionAwards")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="secondary">Excellence</Badge>
+                <Badge variant="secondary">{t("awards.excellence")}</Badge>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Award className="h-12 w-12 mx-auto text-green-500 mb-4" />
-                <CardTitle>Sustainable Fashion Leader</CardTitle>
-                <CardDescription>Rwanda Green Awards 2022</CardDescription>
+                <CardTitle>{t("awards.sustainableFashionLeader")}</CardTitle>
+                <CardDescription>{t("awards.rwandaGreenAwards")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="secondary">Sustainability</Badge>
+                <Badge variant="secondary">{t("awards.sustainability")}</Badge>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Award className="h-12 w-12 mx-auto text-blue-500 mb-4" />
-                <CardTitle>Innovation in Textiles</CardTitle>
-                <CardDescription>East Africa Business Awards 2023</CardDescription>
+                <CardTitle>{t("awards.innovationInTextiles")}</CardTitle>
+                <CardDescription>{t("awards.eastAfricaBusinessAwards")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="secondary">Innovation</Badge>
+                <Badge variant="secondary">{t("awards.innovation")}</Badge>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Award className="h-12 w-12 mx-auto text-purple-500 mb-4" />
-                <CardTitle>ISO 9001:2015 Certified</CardTitle>
-                <CardDescription>Quality Management System</CardDescription>
+                <CardTitle>{t("awards.iso9001")}</CardTitle>
+                <CardDescription>{t("awards.qualityManagementSystem")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="secondary">Quality</Badge>
+                <Badge variant="secondary">{t("awards.quality")}</Badge>
               </CardContent>
             </Card>
           </div>
@@ -399,93 +351,83 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 to-red-150">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Leadership Team</h2>
-            <p className="text-xl text-gray-600">Meet the visionaries driving our company forward</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("leadership.title")}</h2>
+            <p className="text-xl text-gray-600">{t("leadership.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  src="/images/nkd5.jpeg"
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>{"Chantal Murebwa B. Mawe\n\n"}</CardTitle>
-                <CardDescription>{"\n      "}</CardDescription>
+                <CardTitle>{t("leadership.chantal")}</CardTitle>
+                <CardDescription>{t("leadership.chantalDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center font-bold">
-                  Founder and Managing Director New Kigali Designers &amp; Outfitters "House of tailor made Garments"
-                </p>
+                <p className="text-gray-600 text-center font-bold">{t("leadership.chantalRole")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  src="/images/nkd5.jpeg"
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>{"Andrew Kanyonya\n\n"}</CardTitle>
-                <CardDescription>Business Development Manager</CardDescription>
+                <CardTitle>{t("leadership.andrew")}</CardTitle>
+                <CardDescription>{t("leadership.andrewDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center font-bold">
-                  Operations expert with MBA from INSEAD, specializing in sustainable manufacturing
-                </p>
+                <p className="text-gray-600 text-center font-bold">{t("leadership.andrewRole")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  src="/images/nkd5.jpeg"
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>{"Derrick Kanyonya\n\n"}</CardTitle>
-                <CardDescription>Assistant to Business Development Manager</CardDescription>
+                <CardTitle>{t("leadership.derrick")}</CardTitle>
+                <CardDescription>{t("leadership.derrickDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
-                  {""}
-                </p>
+                <p className="text-gray-600 text-center">{t("leadership.derrickRole")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  src="/images/nkd5.jpeg"
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>{"Agnes Kayitesi\n\n"}</CardTitle>
-                <CardDescription>Assistant Managing Director</CardDescription>
+                <CardTitle>{t("leadership.agnes")}</CardTitle>
+                <CardDescription>{t("leadership.agnesDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center leading-8 font-bold">
-                  Digital innovation specialist, implementing smart manufacturing solutions
-                </p>
+                <p className="text-gray-600 text-center leading-8 font-bold">{t("leadership.agnesRole")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="text-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd5.jpg-gifiJZuHMiwsU8Dj0zjDfL56KjV782.jpeg"
+                  src="/images/nkd5.jpeg"
                   alt="New Kigali Designers Leadership Team"
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <CardTitle>{"Jane\n\n"}</CardTitle>
-                <CardDescription>{"\n\nSales and Marketing"}</CardDescription>
+                <CardTitle>{t("leadership.jane")}</CardTitle>
+                <CardDescription>{t("leadership.janeDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center font-bold">
-                  Quality control expert ensuring international standards compliance
-                </p>
+                <p className="text-gray-600 text-center font-bold">{t("leadership.janeRole")}</p>
               </CardContent>
             </Card>
           </div>
@@ -496,8 +438,8 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-75 to-red-125">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Future Innovations</h2>
-            <p className="text-xl text-gray-600">Our roadmap for the next generation of African fashion</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("future.title")}</h2>
+            <p className="text-xl text-gray-600">{t("future.subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -505,14 +447,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Lightbulb className="h-6 w-6 text-blue-600" />
-                  AI-Powered Design
+                  {t("future.aiPoweredDesign")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Implementing artificial intelligence to create personalized designs that blend customer preferences
-                  with traditional African patterns.
-                </p>
+                <p className="text-gray-600">{t("future.aiPoweredDesignDescription")}</p>
               </CardContent>
             </Card>
 
@@ -520,14 +459,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Building2 className="h-6 w-6 text-blue-600" />
-                  Global Expansion
+                  {t("future.globalExpansion")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Opening flagship stores in major fashion capitals while maintaining our commitment to local artisan
-                  communities.
-                </p>
+                <p className="text-gray-600">{t("future.globalExpansionDescription")}</p>
               </CardContent>
             </Card>
 
@@ -535,14 +471,11 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Users className="h-6 w-6 text-blue-600" />
-                  Artisan Academy
+                  {t("future.artisanAcademy")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Establishing a training center to preserve traditional techniques while teaching modern production
-                  methods to the next generation.
-                </p>
+                <p className="text-gray-600">{t("future.artisanAcademyDescription")}</p>
               </CardContent>
             </Card>
           </div>
@@ -553,30 +486,30 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 to-red-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Visit Our Location</h2>
-            <p className="text-xl text-gray-600">Find us in the heart of Kigali, Rwanda's vibrant capital city</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t("location.title")}</h2>
+            <p className="text-xl text-gray-600">{t("location.subtitle")}</p>
           </div>
           <div className="lg:col-span-2 mb-8">
-          <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
-           <iframe
-          src="https://embed.waze.com/iframe?zoom=17&lat=-1.94407&lon=30.06188&pin=1"
-          className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
-           allowFullScreen
-           title="New Kigali Designers Live Map"
-             ></iframe>
+            <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
+              <iframe
+                src="https://embed.waze.com/iframe?zoom=17&lat=-1.94407&lon=30.06188&pin=1"
+                className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
+                allowFullScreen
+                title="New Kigali Designers Live Map"
+              ></iframe>
             </div>
 
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="h-6 w-6 text-blue-600" />
-                  Our Address
+                  {t("location.address")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="font-semibold">New Kigali Designers & Outfitters</p>
-                <p className="text-gray-600">Kigali, Rwanda</p>
-                <p className="text-gray-600">East Africa</p>
+                <p className="font-semibold">{t("location.companyName")}</p>
+                <p className="text-gray-600">{t("location.city")}</p>
+                <p className="text-gray-600">{t("location.region")}</p>
               </CardContent>
             </Card>
 
@@ -584,15 +517,15 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Phone className="h-6 w-6 text-blue-600" />
-                  Contact Information
+                  {t("location.contact")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="text-gray-600 font-extrabold">Phone: +250 780 46 59 74</p>
-             <p className="text-gray-600 font-black">Email: derrickkanyonya@newkigalidesigners.rw</p>
-                <p className="text-gray-600 text-justify font-extrabold">Business Hours: Mon-Fri 7:00 AM - 7:00 PM</p>
-                <p className="text-gray-600 font-extrabold">Saturday: 8:00 AM - 2:00 PM</p>
-                <p className="text-gray-600 font-extrabold">Sunday: 8:00 AM - 2:00 PM</p>
+                <p className="text-gray-600 font-extrabold">{t("location.phone")}</p>
+                <p className="text-gray-600 font-black">{t("location.email")}</p>
+                <p className="text-gray-600 text-justify font-extrabold">{t("location.businessHours")}</p>
+                <p className="text-gray-600 font-extrabold">{t("location.saturdayHours")}</p>
+                <p className="text-gray-600 font-extrabold">{t("location.sundayHours")}</p>
               </CardContent>
             </Card>
           </div>
@@ -603,8 +536,8 @@ export default function HomePage() {
       <footer className="bg-gradient-to-br from-gray-900 to-red-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">New Kigali Designers</h3>
-            <p className="text-gray-400">Crafting the future of African fashion, one thread at a time.</p>
+            <h3 className="text-2xl font-bold mb-2">{t("footer.title")}</h3>
+            <p className="text-gray-400">{t("footer.subtitle")}</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -612,23 +545,19 @@ export default function HomePage() {
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
-              Contact Us On +250 780 46 59 74
-              Email: derrickkanyonya@newkigalidesigners.rw
+              {t("footer.contactUs")}
             </Button>
             <Button
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
-              Visit Gallery On the Website
+              {t("footer.visitGallery")}
             </Button>
           </div>
 
           <div className="text-center text-gray-400 space-y-2">
-            <p>
-              © 2025 New Kigali Designers & Outfitters. All rights reserved. | Designed and manufactured in Rwanda |
-              Celebrating African heritage through contemporary fashion
-            </p>
-            <p>Privacy Policy | Terms of Service | Shipping & Returns | Contact: +250 780 521 244</p>
+            <p>{t("footer.copyright")}</p>
+            <p>{t("footer.policy")}</p>
           </div>
         </div>
       </footer>
